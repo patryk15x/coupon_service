@@ -13,7 +13,7 @@ public class CouponRestController {
     private final CouponRepo repo;
 
     @PostMapping("/coupons")
-    public Coupon create(Coupon coupon){
+    public Coupon create(@RequestBody Coupon coupon){
         return repo.save(coupon);
     }
 
